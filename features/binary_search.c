@@ -25,16 +25,17 @@ void binary_search(int length_arr, int step, int target) {
 		printf("%d ", arr[i]);
 	}
 
-	for (;left <= right;) {
+	for (;left < right;) {
 		mid = left + (right - left) / 2;
-		if (mid == target) {
-			printf("\n%d %d\n", mid, arr[mid]);
+		if (arr[mid] == target) {
+			printf("\n%d %d\n", arr[mid], mid);
+			free(arr);
 			return;
 		}
-		else if (target < mid) right = mid - 1;
+		else if (target < arr[mid]) right = mid - 1;
 		else left = mid + 1;	
 	}
-
+	free(arr);
 	printf("\nнету таково\n");
 
 }
