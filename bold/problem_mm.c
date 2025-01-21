@@ -35,7 +35,7 @@ int main() {
 
 	if (N == 1) {
 		printf("%llu\n", arr[0]);
-		return;
+		return 0;
 	}
 	
  	long long arr[N];
