@@ -1,11 +1,7 @@
 #include <stdio.h>
 
 void min_max(unsigned long long N, long long *arr) {
-	if (N == 1) {
-		printf("%llu\n", arr[0]);
-		return;
-	}
-
+	
 	unsigned char flag = 0;
 	long long min = arr[0];
 	long long max = arr[0];
@@ -37,13 +33,18 @@ int main() {
 		return 0;
 	}
 
+	if (N == 1) {
+		printf("%llu\n", arr[0]);
+		return;
+	}
+	
  	long long arr[N];
 	long long x;
 	
 	for (int i = 0; i < N; ++i) {
-    	scanf("%llu", &x);
-        arr[i] = x;
-    }
+    		scanf("%llu", &x);
+        	arr[i] = x;
+    	}	
 
 	min_max(N, arr);
 }
