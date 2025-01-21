@@ -32,11 +32,6 @@ int main() {
 		printf("0 0\n");
 		return 0;
 	}
-
-	if (N == 1) {
-		printf("%llu\n", arr[0]);
-		return 0;
-	}
 	
  	long long arr[N];
 	long long x;
@@ -44,7 +39,12 @@ int main() {
 	for (int i = 0; i < N; ++i) {
     		scanf("%llu", &x);
         	arr[i] = x;
-    	}	
+    	}
+
+		if (N == 1) {
+		printf("%llu\n", arr[0]);
+		return 0;
+	}
 
 	min_max(N, arr);
 }
