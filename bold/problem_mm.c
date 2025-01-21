@@ -38,7 +38,7 @@ int main() {
 	}
 
  	long long arr[N];
-    long long x;
+	long long x;
 	
 	for (int i = 0; i < N; ++i) {
     	scanf("%llu", &x);
